@@ -9,7 +9,6 @@ export default function SignInPage() {
             rootBox: "mx-auto",
           },
         }}
-        afterSignInUrl="/get-started"
         fallbackRedirectUrl="/get-started"
         signUpUrl="/sign-up"
       />

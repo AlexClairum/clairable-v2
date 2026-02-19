@@ -1,7 +1,7 @@
 import { redirect } from "next/navigation";
 export const dynamic = "force-dynamic";
-import { auth } from "@clerk/nextjs/server";
-import { getCurrentUser } from "@/lib/db";
+import { auth, currentUser } from "@clerk/nextjs/server";
+import { getCurrentUser, ensureUserExists } from "@/lib/db";
 import { PathChoiceForm } from "./path-choice-form";
 
 export default async function GetStartedPage({
@@ -12,7 +12,15 @@ export default async function GetStartedPage({
   const { userId } = await auth();
   if (!userId) redirect("/sign-in");
 
-  const user = await getCurrentUser();
+  let user = await getCurrentUser();
+  if (!user) {
+    const clerkUser = await currentUser();
+    const email =
+      clerkUser?.emailAddresses?.find((e) => e.id === clerkUser.primaryEmailAddressId)?.emailAddress ??
+      clerkUser?.emailAddresses?.[0]?.emailAddress ??
+      "unknown@example.com";
+    user = await ensureUserExists(userId, email);
+  }
   if (!user) redirect("/sign-in");
 
   const params = await searchParams;
