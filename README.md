@@ -23,7 +23,7 @@ Helps organizations get ROI from AI tools they already own (Copilot, ChatGPT, et
 
 3. Configure:
    - [Clerk](https://clerk.com): Create an application with Organizations enabled. Add keys to `.env.local`.
-   - [Supabase](https://supabase.com): Create a project. Run the schema in `supabase/migrations/001_initial_schema.sql`. Add keys to `.env.local`.
+   - [Supabase](https://supabase.com): Create a project. Run the schema in `supabase/migrations/001_initial_schema.sql`. Add publishable and secret keys from **API Keys** (not legacy anon/service_role) to `.env.local`.
    - Set `CLERK_WEBHOOK_SIGNING_SECRET` from Clerk Dashboard → Webhooks. Add endpoint: `https://your-domain.com/api/webhooks/clerk` with events: `organization.created`, `user.created`, `organizationMembership.created`.
 
 4. Seed use cases (after Supabase is configured):
@@ -31,12 +31,33 @@ Helps organizations get ROI from AI tools they already own (Copilot, ChatGPT, et
    npm run seed
    ```
 
-5. **Important**: `npm run build` requires valid Clerk and Supabase env vars. Use real keys from your Clerk and Supabase dashboards.
-
-6. Run:
+5. Run:
    ```bash
    npm run dev
    ```
+
+### Local build test
+
+To verify the production build works before deploying:
+
+```bash
+npm run build
+```
+
+**Required**: Valid `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` and `CLERK_SECRET_KEY` in `.env.local`. Clerk rejects placeholder keys during the build.
+
+### Vercel deployment
+
+1. Connect your repo to [Vercel](https://vercel.com).
+2. Add these environment variables in **Project → Settings → Environment Variables**:
+   - `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY`
+   - `CLERK_SECRET_KEY`
+   - `CLERK_WEBHOOK_SIGNING_SECRET`
+   - `NEXT_PUBLIC_SUPABASE_URL`
+   - `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`
+   - `SUPABASE_SECRET_KEY`
+   - `OPENAI_API_KEY` (if using Phase 2)
+3. Update the Clerk webhook URL to `https://your-vercel-domain.vercel.app/api/webhooks/clerk` after the first deploy.
 
 ## Routes
 
