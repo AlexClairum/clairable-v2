@@ -6,7 +6,8 @@
     "tool": "copilot",
     "time_activity": "writing",
     "prompt_template": "Based on these meeting notes: [paste notes here]\n\nDraft a follow-up email to each attendee summarizing their action items and next steps. Keep it professional and under 150 words per email.",
-    "time_saved_minutes": 15
+    "time_saved_minutes": 15,
+    "why_it_works": "AI excels at turning structured notes into personalized, consistent copy—saving you from retyping the same info for each attendee."
   },
   {
     "title": "Create meeting prep briefs",
@@ -15,7 +16,8 @@
     "tool": "copilot",
     "time_activity": "meetings",
     "prompt_template": "I have a meeting with [client/company name] about [topic]. Here's what I know: [paste context]\n\nCreate a one-page meeting prep brief with: 1) Key facts about them 2) Suggested talking points 3) Questions to ask 4) Potential objections and responses.",
-    "time_saved_minutes": 20
+    "time_saved_minutes": 20,
+    "why_it_works": "Giving AI context upfront lets it synthesize information into a focused brief, so you walk in prepared without manual research."
   },
   {
     "title": "Summarize CRM data into insights",
@@ -24,7 +26,8 @@
     "tool": "chatgpt",
     "time_activity": "data_analysis",
     "prompt_template": "Here is my sales pipeline data: [paste data or summary]\n\nIdentify: 1) Top 3 opportunities at risk 2) Deals that have been stagnant longest 3) Recommended follow-up actions for each.",
-    "time_saved_minutes": 25
+    "time_saved_minutes": 25,
+    "why_it_works": "AI can quickly spot patterns and prioritization signals in data that would take hours to manually analyze."
   },
   {
     "title": "Draft proposal sections",
@@ -33,7 +36,8 @@
     "tool": "chatgpt",
     "time_activity": "reports",
     "prompt_template": "I need to write a proposal section for [product/service]. Key points: [paste]. Our differentiators: [paste]. Target client: [paste].\n\nDraft a 200-word section that emphasizes value and addresses common objections.",
-    "time_saved_minutes": 30
+    "time_saved_minutes": 30,
+    "why_it_works": "Templates and constraints help AI produce persuasive, on-brand copy that you can refine instead of writing from scratch."
   },
   {
     "title": "Research prospect before outreach",
@@ -42,7 +46,8 @@
     "tool": "claude",
     "time_activity": "research",
     "prompt_template": "Research [company name] and [contact name if known]. Provide: 1) Company overview and recent news 2) Likely pain points for their industry 3) Personalization angles for a cold outreach email.",
-    "time_saved_minutes": 15
+    "time_saved_minutes": 15,
+    "why_it_works": "AI can pull together publicly available info into a concise brief, giving you personalization angles without hours of research."
   },
   {
     "title": "Draft LinkedIn connection messages",
@@ -51,7 +56,8 @@
     "tool": "chatgpt",
     "time_activity": "writing",
     "prompt_template": "I want to connect with [name] on LinkedIn. They work at [company] as [role]. Our mutual connection is [if any]. I'm reaching out because [reason].\n\nDraft 3 short, personalized connection request options under 300 characters.",
-    "time_saved_minutes": 10
+    "time_saved_minutes": 10,
+    "why_it_works": "Short, personalized messages perform best—AI generates options within character limits that you can tweak."
   },
   {
     "title": "Create blog post outlines",
@@ -60,7 +66,8 @@
     "tool": "chatgpt",
     "time_activity": "writing",
     "prompt_template": "Create a blog post outline for: [topic]. Target keywords: [keywords]. Tone: [professional/casual]. Include: intro, 4-5 main sections with H2s, key points for each, CTA.",
-    "time_saved_minutes": 20
+    "time_saved_minutes": 20,
+    "why_it_works": "Clear structure and keyword guidance help AI produce SEO-friendly outlines that you can expand efficiently."
   },
   {
     "title": "Draft social media posts",
@@ -69,7 +76,8 @@
     "tool": "chatgpt",
     "time_activity": "writing",
     "prompt_template": "Create 3 social media posts (LinkedIn, X/Twitter, LinkedIn carousel) from this content: [paste]. Each should have a hook, key insight, and CTA. Vary the angle for each platform.",
-    "time_saved_minutes": 15
+    "time_saved_minutes": 15,
+    "why_it_works": "Platform-specific formatting and hooks are formulaic enough for AI to produce strong first drafts you can edit quickly."
   },
   {
     "title": "Analyze campaign performance",
@@ -78,7 +86,8 @@
     "tool": "chatgpt",
     "time_activity": "data_analysis",
     "prompt_template": "Here are my campaign metrics: [paste data]. Analyze: 1) What's working 2) What's underperforming 3) Top 3 optimization recommendations with expected impact.",
-    "time_saved_minutes": 25
+    "time_saved_minutes": 25,
+    "why_it_works": "AI is good at comparing metrics, spotting trends, and suggesting next steps from structured data."
   },
   {
     "title": "Write email subject lines",
@@ -87,7 +96,8 @@
     "tool": "copilot",
     "time_activity": "writing",
     "prompt_template": "Create 5 email subject line options for: [campaign purpose]. Audience: [description]. Tone: [urgency/curiosity/value]. Keep under 50 characters. Include one question and one with numbers.",
-    "time_saved_minutes": 10
+    "time_saved_minutes": 10,
+    "why_it_works": "A/B testing needs volume—AI can generate varied options (questions, numbers, urgency) that you can test."
   },
   {
     "title": "Summarize competitor content",
@@ -96,7 +106,8 @@
     "tool": "claude",
     "time_activity": "research",
     "prompt_template": "Summarize this competitor content: [paste or link]. Extract: 1) Main arguments 2) Gaps we could address 3) Content angles we could create in response.",
-    "time_saved_minutes": 15
+    "time_saved_minutes": 15,
+    "why_it_works": "AI can extract arguments and gaps from long content, helping you identify response angles faster."
   },
   {
     "title": "Create ad copy variations",
@@ -105,7 +116,8 @@
     "tool": "gemini",
     "time_activity": "writing",
     "prompt_template": "Create 4 ad copy variations for [product/service]. Target: [audience]. Value prop: [paste]. Include headlines and body copy. Vary the hook: pain point, benefit, question, social proof.",
-    "time_saved_minutes": 20
+    "time_saved_minutes": 20,
+    "why_it_works": "Testing different hooks (pain, benefit, question, social proof) works well when AI generates structured variations."
   },
   {
     "title": "Summarize financial reports",
@@ -114,7 +126,8 @@
     "tool": "chatgpt",
     "time_activity": "reports",
     "prompt_template": "Summarize this financial report/data: [paste]. Provide: 1) Key findings in 3 bullet points 2) Notable trends 3) Recommended actions. Use plain language, avoid jargon.",
-    "time_saved_minutes": 30
+    "time_saved_minutes": 30,
+    "why_it_works": "AI turns dense data into plain-language summaries when given clear output structure."
   },
   {
     "title": "Analyze variance in budgets",
@@ -123,7 +136,8 @@
     "tool": "chatgpt",
     "time_activity": "data_analysis",
     "prompt_template": "Here is budget vs actual: [paste data]. Identify the top 5 variances, explain likely causes, and suggest next steps for each.",
-    "time_saved_minutes": 25
+    "time_saved_minutes": 25,
+    "why_it_works": "Structured comparison and causation analysis is a strength of AI when data is well formatted."
   },
   {
     "title": "Draft month-end close emails",
@@ -132,7 +146,8 @@
     "tool": "copilot",
     "time_activity": "writing",
     "prompt_template": "Draft a month-end close reminder email to department heads. Include: deadlines, checklist items, who to contact for questions. Tone: professional, clear, concise.",
-    "time_saved_minutes": 15
+    "time_saved_minutes": 15,
+    "why_it_works": "Routine communications with clear requirements are ideal for consistent, repeatable AI output."
   },
   {
     "title": "Explain financial concepts simply",
@@ -141,7 +156,8 @@
     "tool": "claude",
     "time_activity": "research",
     "prompt_template": "Explain [financial concept] in 2-3 sentences for a non-finance audience. Include a simple example.",
-    "time_saved_minutes": 5
+    "time_saved_minutes": 5,
+    "why_it_works": "AI is trained to explain complex topics in accessible language with examples."
   },
   {
     "title": "Draft process documentation",
@@ -150,7 +166,8 @@
     "tool": "chatgpt",
     "time_activity": "reports",
     "prompt_template": "Turn these notes into a clear process document: [paste]. Format: 1) Purpose 2) Prerequisites 3) Step-by-step instructions 4) Troubleshooting 5) Who to contact.",
-    "time_saved_minutes": 30
+    "time_saved_minutes": 30,
+    "why_it_works": "Converting notes into structured docs (purpose, steps, troubleshooting) fits AI well when format is specified."
   },
   {
     "title": "Summarize meeting notes",
@@ -159,7 +176,8 @@
     "tool": "copilot",
     "time_activity": "meetings",
     "prompt_template": "Summarize these meeting notes: [paste]. Output: 1) Key decisions 2) Action items with owners 3) Open questions 4) Next steps.",
-    "time_saved_minutes": 15
+    "time_saved_minutes": 15,
+    "why_it_works": "Extracting decisions, actions, and next steps from unstructured notes is a common AI use case."
   },
   {
     "title": "Prioritize tasks from backlog",
@@ -168,7 +186,8 @@
     "tool": "chatgpt",
     "time_activity": "reports",
     "prompt_template": "Here is my task backlog: [paste]. Criteria: [urgency, impact, dependencies]. Prioritize and suggest what to do first, with reasoning.",
-    "time_saved_minutes": 15
+    "time_saved_minutes": 15,
+    "why_it_works": "AI can apply stated criteria to rank and explain priorities when the list and rules are clear."
   },
   {
     "title": "Draft job descriptions",
@@ -177,7 +196,8 @@
     "tool": "chatgpt",
     "time_activity": "writing",
     "prompt_template": "Create a job description for [role]. Requirements: [paste]. Company: [brief description]. Include: title, summary, responsibilities, qualifications, benefits. Tone: inclusive, clear.",
-    "time_saved_minutes": 25
+    "time_saved_minutes": 25,
+    "why_it_works": "Structured formats with inclusive language guidelines help AI produce consistent, compliant job postings."
   },
   {
     "title": "Prepare interview questions",
@@ -186,7 +206,8 @@
     "tool": "chatgpt",
     "time_activity": "meetings",
     "prompt_template": "Generate 8 interview questions for [role]. Mix: 3 behavioral, 3 situational, 2 role-specific. Include what to listen for in strong answers.",
-    "time_saved_minutes": 20
+    "time_saved_minutes": 20,
+    "why_it_works": "Mixing question types with clear instructions yields balanced interview sets quickly."
   },
   {
     "title": "Draft policy language",
@@ -195,7 +216,8 @@
     "tool": "claude",
     "time_activity": "writing",
     "prompt_template": "Draft policy language for: [policy topic]. Requirements: [paste]. Must include: purpose, scope, procedure, exceptions. Tone: formal, clear, legally careful.",
-    "time_saved_minutes": 30
+    "time_saved_minutes": 30,
+    "why_it_works": "Formal, structured policy sections (purpose, scope, procedure) suit AI when requirements are explicit."
   },
   {
     "title": "Create onboarding checklists",
@@ -204,7 +226,8 @@
     "tool": "chatgpt",
     "time_activity": "reports",
     "prompt_template": "Create a 30-day onboarding checklist for [role] at [company type]. Include: Day 1, Week 1, Week 2-4. Cover: tools, people, processes, goals.",
-    "time_saved_minutes": 20
+    "time_saved_minutes": 20,
+    "why_it_works": "Time-based structure and clear categories make onboarding plans easy for AI to generate."
   },
   {
     "title": "Document technical processes",
@@ -213,7 +236,8 @@
     "tool": "chatgpt",
     "time_activity": "reports",
     "prompt_template": "Document this [process/code/setup]: [paste]. Format: 1) Overview 2) Prerequisites 3) Steps 4) Common issues 5) Related docs.",
-    "time_saved_minutes": 25
+    "time_saved_minutes": 25,
+    "why_it_works": "Converting technical context into standard doc formats works when structure is specified."
   },
   {
     "title": "Write troubleshooting guides",
@@ -222,7 +246,8 @@
     "tool": "chatgpt",
     "time_activity": "reports",
     "prompt_template": "Create a troubleshooting guide from this incident: [paste]. Include: symptoms, root cause, resolution steps, prevention.",
-    "time_saved_minutes": 20
+    "time_saved_minutes": 20,
+    "why_it_works": "Incident reports map well to symptom–cause–fix–prevention structure for AI."
   },
   {
     "title": "Add code comments",
@@ -231,7 +256,8 @@
     "tool": "copilot",
     "time_activity": "writing",
     "prompt_template": "Add clear comments to this code explaining what each section does and why: [paste code].",
-    "time_saved_minutes": 15
+    "time_saved_minutes": 15,
+    "why_it_works": "AI can describe what code does when given context, improving maintainability."
   },
   {
     "title": "Summarize ticket history",
@@ -240,7 +266,8 @@
     "tool": "chatgpt",
     "time_activity": "meetings",
     "prompt_template": "Summarize this support ticket: [paste]. Output: 1) Customer issue 2) What's been tried 3) Current status 4) Suggested next steps.",
-    "time_saved_minutes": 10
+    "time_saved_minutes": 10,
+    "why_it_works": "Long threads with clear sections (issue, tried, status) are ideal for AI summarization."
   },
   {
     "title": "Draft response templates",
@@ -249,7 +276,8 @@
     "tool": "chatgpt",
     "time_activity": "writing",
     "prompt_template": "Create 3 email response templates for: [issue type]. Tone: empathetic, helpful, clear. Include: acknowledgment, solution, next steps, sign-off.",
-    "time_saved_minutes": 20
+    "time_saved_minutes": 20,
+    "why_it_works": "Empathetic tone plus structure (acknowledge, solve, next steps) is reproducible with AI."
   },
   {
     "title": "Translate support content",
@@ -258,7 +286,8 @@
     "tool": "claude",
     "time_activity": "writing",
     "prompt_template": "Translate this support response to [language]. Keep the tone professional and empathetic. Preserve any links or formatting: [paste].",
-    "time_saved_minutes": 10
+    "time_saved_minutes": 10,
+    "why_it_works": "AI translation preserves tone and formatting when given clear instructions."
   },
   {
     "title": "Summarize customer feedback",
@@ -267,7 +296,8 @@
     "tool": "chatgpt",
     "time_activity": "data_analysis",
     "prompt_template": "Analyze this customer feedback: [paste]. Identify: 1) Top 3 themes 2) Sentiment 3) Urgent issues 4) Suggested product/process improvements.",
-    "time_saved_minutes": 20
+    "time_saved_minutes": 20,
+    "why_it_works": "Theme extraction and sentiment from feedback fit AI pattern-matching capabilities."
   },
   {
     "title": "Draft professional emails",
@@ -276,7 +306,8 @@
     "tool": "chatgpt",
     "time_activity": "writing",
     "prompt_template": "Draft a professional email: [purpose]. Key points: [paste]. Tone: [formal/friendly]. Length: [short/medium]. Recipient: [description].",
-    "time_saved_minutes": 10
+    "time_saved_minutes": 10,
+    "why_it_works": "Clear purpose and tone parameters help AI produce appropriate first drafts."
   },
   {
     "title": "Summarize long documents",
@@ -285,7 +316,8 @@
     "tool": "claude",
     "time_activity": "research",
     "prompt_template": "Summarize this document in 5 bullet points. Highlight key decisions, numbers, and action items: [paste].",
-    "time_saved_minutes": 15
+    "time_saved_minutes": 15,
+    "why_it_works": "Bullet summaries with key decisions and numbers are a core AI strength."
   },
   {
     "title": "Organize meeting agendas",
@@ -294,6 +326,7 @@
     "tool": "copilot",
     "time_activity": "meetings",
     "prompt_template": "Create a meeting agenda from these topics: [paste]. Include: objective, time allocation, discussion points, decisions needed.",
-    "time_saved_minutes": 10
+    "time_saved_minutes": 10,
+    "why_it_works": "Scattered topics with clear format (objective, time, decisions) are easy for AI to structure."
   }
 ]

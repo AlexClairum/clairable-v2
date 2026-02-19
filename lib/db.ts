@@ -31,6 +31,7 @@ export type UseCase = {
   time_activity: string;
   prompt_template: string;
   time_saved_minutes: number | null;
+  why_it_works: string | null;
 };
 
 export async function getCurrentUser(): Promise<User | null> {

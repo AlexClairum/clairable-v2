@@ -7,11 +7,18 @@ export async function POST(req: Request) {
   if (!userId) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
   const body = await req.json();
-  const { use_case_id, status } = body;
+  const { use_case_id, status, feedback } = body;
 
-  if (!use_case_id || !["tried", "worked", "didnt_work"].includes(status)) {
+  if (!use_case_id || !["worked", "didnt_work"].includes(status)) {
     return NextResponse.json({ error: "Invalid input" }, { status: 400 });
   }
+
+  const feedbackText =
+    feedback && typeof feedback === "object"
+      ? JSON.stringify(feedback)
+      : typeof feedback === "string"
+        ? feedback
+        : null;
 
   const supabase = createServiceRoleClient();
   const { data: user } = await supabase
@@ -26,6 +33,7 @@ export async function POST(req: Request) {
     user_id: user.id,
     use_case_id,
     status,
+    feedback: feedbackText,
   });
 
   if (error) {

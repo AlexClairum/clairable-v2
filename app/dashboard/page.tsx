@@ -45,8 +45,33 @@ export default async function DashboardPage() {
 
   const { data: allAttempts } = await supabase
     .from("user_attempts")
-    .select("status, use_case_id")
-    .eq("user_id", user.id);
+    .select("status, use_case_id, created_at")
+    .eq("user_id", user.id)
+    .order("created_at", { ascending: false });
+
+  const { data: attemptedUseCases } =
+    attemptedIds.length > 0
+      ? await supabase
+          .from("use_cases")
+          .select("id, title")
+          .in("id", attemptedIds)
+      : { data: [] };
+
+  const useCaseMap = new Map((attemptedUseCases || []).map((uc) => [uc.id, uc.title]));
+  const latestStatusByUseCase = new Map<string, string>();
+  for (const a of allAttempts || []) {
+    if (!latestStatusByUseCase.has(a.use_case_id)) {
+      latestStatusByUseCase.set(a.use_case_id, a.status);
+    }
+  }
+  const triedUseCases =
+    attemptedIds.length > 0
+      ? Array.from(new Set(attemptedIds)).map((id) => ({
+          id,
+          title: useCaseMap.get(id) ?? "Unknown",
+          status: latestStatusByUseCase.get(id) ?? "worked",
+        }))
+      : [];
 
   const workedAttempts =
     allAttempts?.filter((a) => a.status === "worked") || [];
@@ -71,11 +96,14 @@ export default async function DashboardPage() {
       <Header />
       <DashboardContent
         useCases={matched}
+        triedUseCases={triedUseCases}
         isIndividual={user.is_individual === true}
         totalTimeSaved={totalTimeSaved}
         triedCount={triedCount}
         workedCount={workedCount}
         showConversionBanner={showConversionBanner}
+        aiTools={effectiveTools}
+        userRole={user.role}
       />
     </div>
   );

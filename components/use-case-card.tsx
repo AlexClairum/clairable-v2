@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Copy, Check, Loader2 } from "lucide-react";
 import { toast } from "sonner";
+import { FeedbackModal } from "@/components/feedback-modal";
 
 export interface UseCaseCardProps {
   id: string;
@@ -12,7 +13,8 @@ export interface UseCaseCardProps {
   description: string;
   promptTemplate: string;
   timeSavedMinutes: number | null;
-  onAttempt: (useCaseId: string, status: "tried" | "worked" | "didnt_work") => Promise<void>;
+  whyItWorks?: string;
+  onAttempt: (useCaseId: string, status: "worked" | "didnt_work", feedback?: Record<string, unknown>) => Promise<void>;
 }
 
 export function UseCaseCard({
@@ -21,10 +23,13 @@ export function UseCaseCard({
   description,
   promptTemplate,
   timeSavedMinutes,
+  whyItWorks,
   onAttempt,
 }: UseCaseCardProps) {
   const [copied, setCopied] = useState(false);
   const [loading, setLoading] = useState<string | null>(null);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [pendingStatus, setPendingStatus] = useState<"worked" | "didnt_work" | null>(null);
 
   async function handleCopy() {
     await navigator.clipboard.writeText(promptTemplate);
@@ -33,11 +38,13 @@ export function UseCaseCard({
     setTimeout(() => setCopied(false), 2000);
   }
 
-  async function handleAttempt(status: "tried" | "worked" | "didnt_work") {
+  async function handleAttempt(status: "worked" | "didnt_work", feedback?: Record<string, unknown>) {
     setLoading(status);
     try {
-      await onAttempt(id, status);
+      await onAttempt(id, status, feedback);
       toast.success("Thanks for the feedback!");
+      setModalOpen(false);
+      setPendingStatus(null);
     } catch {
       toast.error("Something went wrong");
     } finally {
@@ -45,11 +52,19 @@ export function UseCaseCard({
     }
   }
 
+  function openFeedbackModal(status: "worked" | "didnt_work") {
+    setPendingStatus(status);
+    setModalOpen(true);
+  }
+
   return (
     <Card>
       <CardHeader>
         <CardTitle className="text-lg">{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
+        {whyItWorks && (
+          <p className="text-sm text-muted-foreground italic">{whyItWorks}</p>
+        )}
         {timeSavedMinutes && (
           <p className="text-sm text-muted-foreground">
             Est. time saved: ~{timeSavedMinutes} min
@@ -75,16 +90,8 @@ export function UseCaseCard({
         </div>
         <div className="flex flex-wrap gap-2">
           <Button
-            variant="outline"
             size="sm"
-            onClick={() => handleAttempt("tried")}
-            disabled={loading !== null}
-          >
-            {loading === "tried" ? <Loader2 className="h-4 w-4 animate-spin" /> : "I tried this"}
-          </Button>
-          <Button
-            size="sm"
-            onClick={() => handleAttempt("worked")}
+            onClick={() => openFeedbackModal("worked")}
             disabled={loading !== null}
           >
             {loading === "worked" ? <Loader2 className="h-4 w-4 animate-spin" /> : "It worked!"}
@@ -92,7 +99,7 @@ export function UseCaseCard({
           <Button
             variant="destructive"
             size="sm"
-            onClick={() => handleAttempt("didnt_work")}
+            onClick={() => openFeedbackModal("didnt_work")}
             disabled={loading !== null}
           >
             {loading === "didnt_work" ? (
@@ -102,6 +109,13 @@ export function UseCaseCard({
             )}
           </Button>
         </div>
+        <FeedbackModal
+          open={modalOpen}
+          onOpenChange={setModalOpen}
+          status={pendingStatus ?? "worked"}
+          onSubmit={(feedback) => pendingStatus && handleAttempt(pendingStatus, feedback)}
+          loading={loading !== null}
+        />
       </CardContent>
     </Card>
   );
