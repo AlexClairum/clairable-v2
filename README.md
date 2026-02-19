@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Clairable - AI Adoption Enablement Platform
 
-## Getting Started
+Helps organizations get ROI from AI tools they already own (Copilot, ChatGPT, etc.) by helping employees discover role-specific use cases, try them, and track what works.
 
-First, run the development server:
+## Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Frontend**: Next.js 16 (App Router), React, TypeScript, Tailwind CSS, Shadcn UI
+- **Backend**: Supabase (PostgreSQL)
+- **Auth**: Clerk (with Organizations)
+- **Hosting**: Vercel
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Setup
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Clone and install:
+   ```bash
+   npm install
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. Copy environment variables:
+   ```bash
+   cp .env.example .env.local
+   ```
 
-## Learn More
+3. Configure:
+   - [Clerk](https://clerk.com): Create an application with Organizations enabled. Add keys to `.env.local`.
+   - [Supabase](https://supabase.com): Create a project. Run the schema in `supabase/migrations/001_initial_schema.sql`. Add keys to `.env.local`.
+   - Set `CLERK_WEBHOOK_SIGNING_SECRET` from Clerk Dashboard → Webhooks. Add endpoint: `https://your-domain.com/api/webhooks/clerk` with events: `organization.created`, `user.created`, `organizationMembership.created`.
 
-To learn more about Next.js, take a look at the following resources:
+4. Seed use cases (after Supabase is configured):
+   ```bash
+   npm run seed
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+5. **Important**: `npm run build` requires valid Clerk and Supabase env vars. Use real keys from your Clerk and Supabase dashboards.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+6. Run:
+   ```bash
+   npm run dev
+   ```
 
-## Deploy on Vercel
+## Routes
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `/` - Landing
+- `/sign-in`, `/sign-up` - Auth
+- `/get-started` - Path choice (individual vs team)
+- `/create-org` - Create organization (team path)
+- `/onboarding` - Org setup (admin)
+- `/welcome` - User onboarding (role, priorities)
+- `/dashboard` - Use case discovery
+- `/admin` - Admin metrics
+- `/admin/invite` - Invite team
+- `/upgrade` - Individual → org conversion

@@ -1,0 +1,299 @@
+[
+  {
+    "title": "Draft follow-up emails after meetings",
+    "description": "Use Copilot to turn meeting notes into personalized follow-up emails for attendees.",
+    "role": "Sales",
+    "tool": "copilot",
+    "time_activity": "writing",
+    "prompt_template": "Based on these meeting notes: [paste notes here]\n\nDraft a follow-up email to each attendee summarizing their action items and next steps. Keep it professional and under 150 words per email.",
+    "time_saved_minutes": 15
+  },
+  {
+    "title": "Create meeting prep briefs",
+    "description": "Generate a one-page briefing before client calls with key context and talking points.",
+    "role": "Sales",
+    "tool": "copilot",
+    "time_activity": "meetings",
+    "prompt_template": "I have a meeting with [client/company name] about [topic]. Here's what I know: [paste context]\n\nCreate a one-page meeting prep brief with: 1) Key facts about them 2) Suggested talking points 3) Questions to ask 4) Potential objections and responses.",
+    "time_saved_minutes": 20
+  },
+  {
+    "title": "Summarize CRM data into insights",
+    "description": "Turn raw CRM data into actionable sales insights and trends.",
+    "role": "Sales",
+    "tool": "chatgpt",
+    "time_activity": "data_analysis",
+    "prompt_template": "Here is my sales pipeline data: [paste data or summary]\n\nIdentify: 1) Top 3 opportunities at risk 2) Deals that have been stagnant longest 3) Recommended follow-up actions for each.",
+    "time_saved_minutes": 25
+  },
+  {
+    "title": "Draft proposal sections",
+    "description": "Use AI to write proposal sections based on your requirements and past wins.",
+    "role": "Sales",
+    "tool": "chatgpt",
+    "time_activity": "reports",
+    "prompt_template": "I need to write a proposal section for [product/service]. Key points: [paste]. Our differentiators: [paste]. Target client: [paste].\n\nDraft a 200-word section that emphasizes value and addresses common objections.",
+    "time_saved_minutes": 30
+  },
+  {
+    "title": "Research prospect before outreach",
+    "description": "Quickly research a company or contact to personalize your outreach.",
+    "role": "Sales",
+    "tool": "claude",
+    "time_activity": "research",
+    "prompt_template": "Research [company name] and [contact name if known]. Provide: 1) Company overview and recent news 2) Likely pain points for their industry 3) Personalization angles for a cold outreach email.",
+    "time_saved_minutes": 15
+  },
+  {
+    "title": "Draft LinkedIn connection messages",
+    "description": "Create personalized connection requests that get accepted.",
+    "role": "Sales",
+    "tool": "chatgpt",
+    "time_activity": "writing",
+    "prompt_template": "I want to connect with [name] on LinkedIn. They work at [company] as [role]. Our mutual connection is [if any]. I'm reaching out because [reason].\n\nDraft 3 short, personalized connection request options under 300 characters.",
+    "time_saved_minutes": 10
+  },
+  {
+    "title": "Create blog post outlines",
+    "description": "Generate SEO-friendly blog outlines from a topic and keywords.",
+    "role": "Marketing",
+    "tool": "chatgpt",
+    "time_activity": "writing",
+    "prompt_template": "Create a blog post outline for: [topic]. Target keywords: [keywords]. Tone: [professional/casual]. Include: intro, 4-5 main sections with H2s, key points for each, CTA.",
+    "time_saved_minutes": 20
+  },
+  {
+    "title": "Draft social media posts",
+    "description": "Generate engaging social posts from a blog or announcement.",
+    "role": "Marketing",
+    "tool": "chatgpt",
+    "time_activity": "writing",
+    "prompt_template": "Create 3 social media posts (LinkedIn, X/Twitter, LinkedIn carousel) from this content: [paste]. Each should have a hook, key insight, and CTA. Vary the angle for each platform.",
+    "time_saved_minutes": 15
+  },
+  {
+    "title": "Analyze campaign performance",
+    "description": "Summarize campaign metrics and suggest optimizations.",
+    "role": "Marketing",
+    "tool": "chatgpt",
+    "time_activity": "data_analysis",
+    "prompt_template": "Here are my campaign metrics: [paste data]. Analyze: 1) What's working 2) What's underperforming 3) Top 3 optimization recommendations with expected impact.",
+    "time_saved_minutes": 25
+  },
+  {
+    "title": "Write email subject lines",
+    "description": "Generate A/B test subject lines for email campaigns.",
+    "role": "Marketing",
+    "tool": "copilot",
+    "time_activity": "writing",
+    "prompt_template": "Create 5 email subject line options for: [campaign purpose]. Audience: [description]. Tone: [urgency/curiosity/value]. Keep under 50 characters. Include one question and one with numbers.",
+    "time_saved_minutes": 10
+  },
+  {
+    "title": "Summarize competitor content",
+    "description": "Quickly analyze competitor blogs or content for insights.",
+    "role": "Marketing",
+    "tool": "claude",
+    "time_activity": "research",
+    "prompt_template": "Summarize this competitor content: [paste or link]. Extract: 1) Main arguments 2) Gaps we could address 3) Content angles we could create in response.",
+    "time_saved_minutes": 15
+  },
+  {
+    "title": "Create ad copy variations",
+    "description": "Generate multiple ad copy options for testing.",
+    "role": "Marketing",
+    "tool": "gemini",
+    "time_activity": "writing",
+    "prompt_template": "Create 4 ad copy variations for [product/service]. Target: [audience]. Value prop: [paste]. Include headlines and body copy. Vary the hook: pain point, benefit, question, social proof.",
+    "time_saved_minutes": 20
+  },
+  {
+    "title": "Summarize financial reports",
+    "description": "Turn dense financial data into executive summaries.",
+    "role": "Finance",
+    "tool": "chatgpt",
+    "time_activity": "reports",
+    "prompt_template": "Summarize this financial report/data: [paste]. Provide: 1) Key findings in 3 bullet points 2) Notable trends 3) Recommended actions. Use plain language, avoid jargon.",
+    "time_saved_minutes": 30
+  },
+  {
+    "title": "Analyze variance in budgets",
+    "description": "Identify and explain budget vs actual variances.",
+    "role": "Finance",
+    "tool": "chatgpt",
+    "time_activity": "data_analysis",
+    "prompt_template": "Here is budget vs actual: [paste data]. Identify the top 5 variances, explain likely causes, and suggest next steps for each.",
+    "time_saved_minutes": 25
+  },
+  {
+    "title": "Draft month-end close emails",
+    "description": "Create standardized month-end communication templates.",
+    "role": "Finance",
+    "tool": "copilot",
+    "time_activity": "writing",
+    "prompt_template": "Draft a month-end close reminder email to department heads. Include: deadlines, checklist items, who to contact for questions. Tone: professional, clear, concise.",
+    "time_saved_minutes": 15
+  },
+  {
+    "title": "Explain financial concepts simply",
+    "description": "Get plain-language explanations of complex financial terms.",
+    "role": "Finance",
+    "tool": "claude",
+    "time_activity": "research",
+    "prompt_template": "Explain [financial concept] in 2-3 sentences for a non-finance audience. Include a simple example.",
+    "time_saved_minutes": 5
+  },
+  {
+    "title": "Draft process documentation",
+    "description": "Create step-by-step process docs from your notes.",
+    "role": "Operations",
+    "tool": "chatgpt",
+    "time_activity": "reports",
+    "prompt_template": "Turn these notes into a clear process document: [paste]. Format: 1) Purpose 2) Prerequisites 3) Step-by-step instructions 4) Troubleshooting 5) Who to contact.",
+    "time_saved_minutes": 30
+  },
+  {
+    "title": "Summarize meeting notes",
+    "description": "Transform raw meeting notes into actionable summaries.",
+    "role": "Operations",
+    "tool": "copilot",
+    "time_activity": "meetings",
+    "prompt_template": "Summarize these meeting notes: [paste]. Output: 1) Key decisions 2) Action items with owners 3) Open questions 4) Next steps.",
+    "time_saved_minutes": 15
+  },
+  {
+    "title": "Prioritize tasks from backlog",
+    "description": "Get AI-assisted prioritization of your task list.",
+    "role": "Operations",
+    "tool": "chatgpt",
+    "time_activity": "reports",
+    "prompt_template": "Here is my task backlog: [paste]. Criteria: [urgency, impact, dependencies]. Prioritize and suggest what to do first, with reasoning.",
+    "time_saved_minutes": 15
+  },
+  {
+    "title": "Draft job descriptions",
+    "description": "Create job postings from role requirements.",
+    "role": "HR",
+    "tool": "chatgpt",
+    "time_activity": "writing",
+    "prompt_template": "Create a job description for [role]. Requirements: [paste]. Company: [brief description]. Include: title, summary, responsibilities, qualifications, benefits. Tone: inclusive, clear.",
+    "time_saved_minutes": 25
+  },
+  {
+    "title": "Prepare interview questions",
+    "description": "Generate role-specific behavioral and situational questions.",
+    "role": "HR",
+    "tool": "chatgpt",
+    "time_activity": "meetings",
+    "prompt_template": "Generate 8 interview questions for [role]. Mix: 3 behavioral, 3 situational, 2 role-specific. Include what to listen for in strong answers.",
+    "time_saved_minutes": 20
+  },
+  {
+    "title": "Draft policy language",
+    "description": "Turn policy requirements into clear, compliant language.",
+    "role": "HR",
+    "tool": "claude",
+    "time_activity": "writing",
+    "prompt_template": "Draft policy language for: [policy topic]. Requirements: [paste]. Must include: purpose, scope, procedure, exceptions. Tone: formal, clear, legally careful.",
+    "time_saved_minutes": 30
+  },
+  {
+    "title": "Create onboarding checklists",
+    "description": "Generate structured onboarding plans for new hires.",
+    "role": "HR",
+    "tool": "chatgpt",
+    "time_activity": "reports",
+    "prompt_template": "Create a 30-day onboarding checklist for [role] at [company type]. Include: Day 1, Week 1, Week 2-4. Cover: tools, people, processes, goals.",
+    "time_saved_minutes": 20
+  },
+  {
+    "title": "Document technical processes",
+    "description": "Create clear docs from technical notes or code.",
+    "role": "IT",
+    "tool": "chatgpt",
+    "time_activity": "reports",
+    "prompt_template": "Document this [process/code/setup]: [paste]. Format: 1) Overview 2) Prerequisites 3) Steps 4) Common issues 5) Related docs.",
+    "time_saved_minutes": 25
+  },
+  {
+    "title": "Write troubleshooting guides",
+    "description": "Turn incident notes into reusable runbooks.",
+    "role": "IT",
+    "tool": "chatgpt",
+    "time_activity": "reports",
+    "prompt_template": "Create a troubleshooting guide from this incident: [paste]. Include: symptoms, root cause, resolution steps, prevention.",
+    "time_saved_minutes": 20
+  },
+  {
+    "title": "Add code comments",
+    "description": "Generate clear comments for complex code sections.",
+    "role": "IT",
+    "tool": "copilot",
+    "time_activity": "writing",
+    "prompt_template": "Add clear comments to this code explaining what each section does and why: [paste code].",
+    "time_saved_minutes": 15
+  },
+  {
+    "title": "Summarize ticket history",
+    "description": "Get quick context from long support ticket threads.",
+    "role": "Customer Support",
+    "tool": "chatgpt",
+    "time_activity": "meetings",
+    "prompt_template": "Summarize this support ticket: [paste]. Output: 1) Customer issue 2) What's been tried 3) Current status 4) Suggested next steps.",
+    "time_saved_minutes": 10
+  },
+  {
+    "title": "Draft response templates",
+    "description": "Create consistent response templates for common issues.",
+    "role": "Customer Support",
+    "tool": "chatgpt",
+    "time_activity": "writing",
+    "prompt_template": "Create 3 email response templates for: [issue type]. Tone: empathetic, helpful, clear. Include: acknowledgment, solution, next steps, sign-off.",
+    "time_saved_minutes": 20
+  },
+  {
+    "title": "Translate support content",
+    "description": "Quickly translate support docs or responses.",
+    "role": "Customer Support",
+    "tool": "claude",
+    "time_activity": "writing",
+    "prompt_template": "Translate this support response to [language]. Keep the tone professional and empathetic. Preserve any links or formatting: [paste].",
+    "time_saved_minutes": 10
+  },
+  {
+    "title": "Summarize customer feedback",
+    "description": "Turn raw feedback into actionable insights.",
+    "role": "Customer Support",
+    "tool": "chatgpt",
+    "time_activity": "data_analysis",
+    "prompt_template": "Analyze this customer feedback: [paste]. Identify: 1) Top 3 themes 2) Sentiment 3) Urgent issues 4) Suggested product/process improvements.",
+    "time_saved_minutes": 20
+  },
+  {
+    "title": "Draft professional emails",
+    "description": "Compose clear, professional emails for any context.",
+    "role": "Other",
+    "tool": "chatgpt",
+    "time_activity": "writing",
+    "prompt_template": "Draft a professional email: [purpose]. Key points: [paste]. Tone: [formal/friendly]. Length: [short/medium]. Recipient: [description].",
+    "time_saved_minutes": 10
+  },
+  {
+    "title": "Summarize long documents",
+    "description": "Get quick summaries of reports or articles.",
+    "role": "Other",
+    "tool": "claude",
+    "time_activity": "research",
+    "prompt_template": "Summarize this document in 5 bullet points. Highlight key decisions, numbers, and action items: [paste].",
+    "time_saved_minutes": 15
+  },
+  {
+    "title": "Organize meeting agendas",
+    "description": "Structure scattered notes into a clear agenda.",
+    "role": "Other",
+    "tool": "copilot",
+    "time_activity": "meetings",
+    "prompt_template": "Create a meeting agenda from these topics: [paste]. Include: objective, time allocation, discussion points, decisions needed.",
+    "time_saved_minutes": 10
+  }
+]
